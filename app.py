@@ -1,3 +1,16 @@
+import os
+import openpyxl
+import pandas as pd
+import smtplib
+import mimetypes
+from email.message import EmailMessage
+from analyticskit import *
+import datetime as dt
+
+pd.options.display.float_format = '{:,.2f}'.format # Display option to include 2 decimal places on all floats
+pd.set_option('display.max_columns', None) # Display option to show all columns
+pd.set_option('display.max_rows', None) # Display option to show all rows
+
 #1
 while True:
     directory = single_input('Input directory with ProductData.xlsx, MasterInvoice.pdf, and order files')
